@@ -1,9 +1,12 @@
 (function($) {
   $.fn.copyThat = function(url) {
+    if(url == null) {
+      url = '/copythat.swf';
+    }
     return $(this).embedflash({
       width: 14,
       height: 14,
-      url: url,
+      url: '/copythat.swf',
       vars: {
         domTarget: this.selector
       }
